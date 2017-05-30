@@ -1,0 +1,1 @@
+cmd_/root/File/Programe/syslog/src/hook_detection.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-4.9.0-kali3-common/scripts/module-common.lds --build-id  -o /root/File/Programe/syslog/src/hook_detection.ko /root/File/Programe/syslog/src/hook_detection.o /root/File/Programe/syslog/src/hook_detection.mod.o ;  true

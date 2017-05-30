@@ -1,0 +1,1 @@
+cmd_/root/File/Programe/syslog/src/hello.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-4.9.0-kali3-common/scripts/module-common.lds --build-id  -o /root/File/Programe/syslog/src/hello.ko /root/File/Programe/syslog/src/hello.o /root/File/Programe/syslog/src/hello.mod.o ;  true
