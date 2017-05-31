@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<style>
+*{margin:0;padding:0}
+body{
+  font-size:16px;
+  font-family:Consolas;
+}
+.drop_down {
+cursor:default;
+width:100px;
+overflow:hidden;
+float:left;
+//display:inline;
+}
+.drop_btn {
+padding:10px;
+background:black;
+color:white;
+width:100%;
+}
+.drop_down ul {
+display:none;}
+.drop_down li{
+padding:5px;
+list-style-type:none;
+text-align:center;
+border:1px solid black;
+border-top:none;
+background:lightblue;
+}
+.drop_down li:hover{
+background:white
+}
+.drop_down a{
+color: hotpink;
+text-decoration:none;
+}
+#drop_a {
+color:hotpink;
+padding-left:5px;
+}
+.bord {
+border: 1px solid black;
+float:left;
+width:1400px;
+height:700px;
+overflow:scroll;
+}
+
+</style>
+<body>
+<div class="drop_down" onmouseover="drop_on()" onmouseout ="drop_off()">
+<div class="drop_btn">菜单<span id="drop_a">&plus;</span></div>
+<ul id="ulist">
+<li><a href="#">显示syslog</a></li>
+<li><a href="#">显示进程日志</a></li>
+<li><a href="#">显示文件系统日志</a></li>
+<li><a href="#" onclick="drop_close()">&times;</a></li>
+</ul>
+</div>
+<div class="bord">
+<p>{{context}}</p>
+</div>
+<script>
+function drop_on() {
+var dspan=document.getElementById('drop_a');
+var ulist=document.getElementById('ulist');
+dspan.innerHTML="&times;";
+ulist.style.display="block";
+}
+
+function drop_off() {
+var dspan=document.getElementById('drop_a');
+var ulist=document.getElementById('ulist');
+dspan.innerHTML="&plus;";
+ulist.style.display="none";
+}
+function drop_close() {
+var dspan=document.getElementById('drop_a');
+var ulist=document.getElementById('ulist');
+dspan.innerHTML="&plus;";
+ulist.style.display="none";
+}
+</script>
+</body>
+</html>
